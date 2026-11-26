@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Segura – Loja de camisinhas com entrega discreta</title>
+<meta name="description" content="Camisinhas certificadas, guia de escolha e entrega em embalagem neutra. Projeto de portfólio com animação controlada pelo mouse.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#principal">Ir para o conteúdo principal</a>
+<header class="topo">
+  <a class="marca" href="#principal">Segura</a>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#guia">Guia de escolha</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+      <li><a href="#projeto">Projeto</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <p class="carrinho" aria-live="polite">Carrinho: <span id="qtd">0</span> itens</p>
+</header>
+
+<main id="principal">
+  <section class="palco" aria-labelledby="titulo-hero">
+    <div class="palco-texto">
+      <h1 id="titulo-hero">Proteção sem complicação, entregue com discrição.</h1>
+      <p>Camisinhas certificadas pelo Inmetro, em embalagem neutra e com envio rápido para todo o Brasil.</p>
+      <p><a class="botao" href="#produtos">Ver produtos</a></p>
+    </div>
+    <div class="cena" id="cena">
+      <video id="video" muted playsinline preload="auto" hidden aria-label="Vídeo das camisinhas. Mova o mouse ou o controle para avançar ou voltar."></video>
+      <canvas id="tela" width="1280" height="720" role="img" aria-label="Camisinhas caindo em câmera lenta. Mova o mouse ou o controle para levá-las para a esquerda ou para a direita."></canvas>
+    </div>
+    <label class="controle" for="quadro">Avançar ou voltar a animação
+      <input type="range" id="quadro" min="0" max="100" value="50">
+    </label>
+  </section>
+
+  <section id="produtos" class="bloco" aria-labelledby="titulo-produtos">
+    <h2 id="titulo-produtos">Nossos produtos</h2>
+    <ul class="produtos">
+      <li><h3>Clássica</h3><p>Látex natural e lubrificação suave. Caixa com 12 unidades.</p><p class="preco">R$ 24,90</p><button type="button" class="botao" data-nome="Clássica" aria-label="Adicionar Clássica ao carrinho">Adicionar</button></li>
+      <li><h3>Ultrafina</h3><p>Mais sensibilidade com a mesma resistência. Caixa com 12 unidades.</p><p class="preco">R$ 29,90</p><button type="button" class="botao" data-nome="Ultrafina" aria-label="Adicionar Ultrafina ao carrinho">Adicionar</button></li>
+      <li><h3>Texturizada</h3><p>Relevos estratégicos para mais conforto. Caixa com 12 unidades.</p><p class="preco">R$ 27,90</p><button type="button" class="botao" data-nome="Texturizada" aria-label="Adicionar Texturizada ao carrinho">Adicionar</button></li>
+    </ul>
+  </section>
+
+  <section id="guia" class="bloco claro" aria-labelledby="titulo-guia">
+    <h2 id="titulo-guia">Guia de escolha</h2>
+    <div class="tabela-rolagem">
+      <table>
+        <caption>Comparativo entre os modelos</caption>
+        <thead><tr><th scope="col">Modelo</th><th scope="col">Espessura</th><th scope="col">Indicado para</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Clássica</th><td>Padrão</td><td>Uso diário, ótimo custo-benefício</td></tr>
+          <tr><th scope="row">Ultrafina</th><td>Fina</td><td>Quem busca mais sensibilidade</td></tr>
+          <tr><th scope="row">Texturizada</th><td>Padrão, com relevos</td><td>Quem quer variar a experiência</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="duvidas" class="bloco" aria-labelledby="titulo-duvidas">
+    <h2 id="titulo-duvidas">Dúvidas frequentes</h2>
+    <details><summary>Como sei se o tamanho é o certo?</summary><p>Preservativos muito justos ou largos podem escorregar ou romper. As caixas indicam a largura nominal para facilitar a escolha.</p></details>
+    <details><summary>Qual a validade dos produtos?</summary><p>Enviamos apenas lotes com vários meses de validade restantes. A data fica impressa na embalagem.</p></details>
+    <details><summary>Posso usar lubrificante com qualquer camisinha?</summary><p>Com látex, use sempre lubrificantes à base de água ou silicone. Óleos podem danificar o material.</p></details>
+  </section>
+
+  <section id="projeto" class="bloco claro" aria-labelledby="titulo-projeto">
+    <h2 id="titulo-projeto">Sobre o projeto</h2>
+    <p class="lead">Site de portfólio feito para apresentação: referência, design system, animação e publicação.</p>
+    <dl class="ficha">
+      <div><dt>Objetivo</dt><dd>Mostrar um site rápido, acessível e bonito, com nota 95 ou mais no WAVE e no Lighthouse.</dd></div>
+      <div><dt>Referência</dt><dd>Site de loja publicado no GitHub Pages, usado como base de estrutura e conteúdo.</dd></div>
+      <div><dt>Animação</dt><dd>Vídeo de camisinhas caindo em câmera lenta, controlado pelo mouse.</dd></div>
+      <div><dt>Entrega</dt><dd>Código publicado no GitHub.</dd></div>
+    </dl>
+  </section>
+
+  <section id="contato" class="bloco" aria-labelledby="titulo-contato">
+    <h2 id="titulo-contato">Receba ofertas e novidades</h2>
+    <form id="form" novalidate>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="nome@exemplo.com" required aria-describedby="msg">
+      <button type="submit" class="botao">Quero receber</button>
+      <p id="msg" role="status"></p>
+    </form>
+    <p>Fale com a gente: <a href="mailto:contatovitorhugo09@gmail.com">contatovitorhugo09@gmail.com</a></p>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>© 2026 Segura. Todos os direitos reservados.</p>
+  <p class="mini">Este site é uma demonstração. Os produtos exibidos são fictícios.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
